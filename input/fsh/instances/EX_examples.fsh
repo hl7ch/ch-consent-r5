@@ -30,9 +30,9 @@ Description: "Example of a General Consent accepted by the patient"
 * controller.display = "SpitalSeeblick"
 * policyBasis.url = "https://www.unimedsuisse.ch/de/projekte/generalkonsent"
 * decision = #deny //decision will change in provision
-* provision[+].code.coding.system = "http://fhir.ch/ig/ch-core/CodeSystem/ConsentProvisionCodesCS"
+* provision[+].code.coding.system = $CSConsentProvisionCodes
 * provision[=].code.coding.code = #GC //General Consent
-* provision[=].purpose.system = "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+* provision[=].purpose.system = $v3-ActReason
 * provision[=].purpose.code = #HRESCH //Healthcare research
 
 
@@ -66,9 +66,9 @@ Description: "Example of a General Consent denied by a legal representative"
 * controller.display = "SpitalSeeblick"
 * policyBasis.url = "https://www.unimedsuisse.ch/de/projekte/generalkonsent"
 * decision = #permit //decision will change in provision
-* provision[+].code.coding.system = "http://fhir.ch/ig/ch-core/CodeSystem/ConsentProvisionCodesCS" 
+* provision[+].code.coding.system = $CSConsentProvisionCodes 
 * provision[=].code.coding.code = #GC //General Consent
-* provision[=].purpose.system = "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+* provision[=].purpose.system = $v3-ActReason
 * provision[=].purpose.code = #HRESCH //Healthcare research
 
 
@@ -103,9 +103,9 @@ Description: "Example of a Consent for participation in a Patient Portal accepte
 * controller.identifier.value = "7601000618306"
 * controller.display = "SpitalSeeblick"
 * decision = #deny //decision will change in provision
-* provision[+].code.coding.system = "http://fhir.ch/ig/ch-core/CodeSystem/ConsentProvisionCodesCS"
+* provision[+].code.coding.system = $CSConsentProvisionCodes
 * provision[=].code.coding.code = #PATPORTAL //Patient Portal
-* provision[=].purpose.system = "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+* provision[=].purpose.system = $v3-ActReason
 * provision[=].purpose.code = #PATADMIN //Patient administration
 
 
